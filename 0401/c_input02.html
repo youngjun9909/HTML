@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>c_input02.html</title>
+</head>
+<>
+  <!-- 
+    submit & reset 속성값
+
+    input 태그의 다양한 속성값들과
+    전송/리셋 버튼 사용 예제
+   -->
+  <h1>롯데 자이언츠 유니폼 주문하기</h1>
+  <div id="containar" style="width: 500;">
+  <form action="">
+    <fieldset>
+      <legend>배송 정소</legend>
+      <ul>
+        <li>
+          <label for="name">이름</label>
+          <input type="text" id="name" />
+        </li>
+        <li>
+          <label for="adrees">주소</label>
+          <input type="text" id="adrees" />
+        </li>
+        <!-- 
+          이메일의 형식
+          : 아이디@웹주소.com
+          >>html5에서 지원하는 이메일 형식은
+          :'아이디 @ 텍스트' 까지 지원
+          -따라서 js 기능으로 유효성 검사 실기가 필수(정규표현식)
+        -->
+        <li>
+          <label for="email">이메일</label>
+          <input type="email" id="email" />
+        </li>
+        <li>
+          <label for="phone">전화번호</label>
+          <input type="tel" id="phone" />
+        </li>
+        <!-- type - date속성값 (날짜선택란) -->
+        <li>
+          <label for="day">배송 지정</label>
+          <input type="date" id="day" />
+        </li>
+        <li>
+          <label for="memo">배송 요청</label>
+          <input type="text" id="memo" />
+        </li>
+        
+      </ul>
+    </fieldset>
+      <div>
+      <!-- 버튼의 value 속성은 버튼명을 지정  -->
+      <!-- 제출 버튼 -->
+      <input type="submit" value="주문하기" />
+      <!-- 초기화 버튼 -->
+      <input type="reset" value="취소하기"/>
+    </div>
+  </form>
+</div>
+<!-- 아이디 (기호) 입력되는 사이트명 (기호) com-->
+
+<!--
+  number & range 속성값
+  
+-->
+<input type="number" min="0" max="5"/>
+<input type="number" step="3"/>
+<!-- range 범위의 기본값 0 ~ 100 -->
+<input type="range" value="20"/>
+<input type="range" />
+
+<!--
+  button 속성값
+  : 기능이 없는 단순 버튼
+  : button 태그와 같은 기능
+-->
+<input type="button" value="버튼에 표시할 내용" />
+
+<!-- 
+  file 속성값
+-->
+<input type="file" name="" id="" />
+
+<!-- 
+  hidden 속성값 
+  : 관리자가 데이터를 수집 할 때
+-->
+<input type="hidden" name="이름" value="서버에 넘길 값" />
+</body>
+</html>
